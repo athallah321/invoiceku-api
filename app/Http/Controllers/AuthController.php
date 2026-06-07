@@ -36,8 +36,8 @@ class AuthController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        // Send email verification
-        $user->sendEmailVerificationNotification();
+        // Email verification disabled - uncomment if email config is ready
+        // $user->sendEmailVerificationNotification();
 
         return response()->json([
             'message' => 'Registrasi berhasil! Silakan cek email untuk verifikasi.',
